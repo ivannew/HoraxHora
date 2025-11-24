@@ -25,6 +25,15 @@ export default function Layout() {
           ),
         }}
       />
+        <Tabs.Screen
+  name="cursos"
+  options={{
+    title: "Cursos",
+    tabBarIcon: ({ color, size }) => (
+      <Ionicons name="school-outline" color={color} size={size} />
+    ),
+  }}
+/>
       <Tabs.Screen
         name="publicar"
         options={{
@@ -43,6 +52,16 @@ export default function Layout() {
           ),
         }}
       />
+    
+
+      <Tabs.Screen name="modal" options={{ href: null }} />
+<Tabs.Screen name="DetalleScreen" options={{ href: null }} />
+<Tabs.Screen name="[id]" options={{ href: null }} />
+<Tabs.Screen 
+  name="cursoDetalle" 
+  options={{ href: null }} 
+/>
+
     </Tabs>
   );
 }
