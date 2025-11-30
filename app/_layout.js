@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
-export default function Layout() {
+export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
@@ -25,15 +25,17 @@ export default function Layout() {
           ),
         }}
       />
-        <Tabs.Screen
-  name="cursos"
-  options={{
-    title: "Cursos",
-    tabBarIcon: ({ color, size }) => (
-      <Ionicons name="school-outline" color={color} size={size} />
-    ),
-  }}
-/>
+
+      <Tabs.Screen
+        name="cursos"
+        options={{
+          title: "Cursos",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="school-outline" color={color} size={size} />
+          ),
+        }}
+      />
+
       <Tabs.Screen
         name="publicar"
         options={{
@@ -43,6 +45,17 @@ export default function Layout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="Solicitudes"
+        options={{
+          title: "Solicitudes",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="notifications-outline" color={color} size={size} />
+          ),
+        }}
+      />
+
       <Tabs.Screen
         name="perfil"
         options={{
@@ -52,16 +65,13 @@ export default function Layout() {
           ),
         }}
       />
-    
 
+      {/* Ocultos */}
+      <Tabs.Screen name="videoCall" options={{ href: null }} />
       <Tabs.Screen name="modal" options={{ href: null }} />
-<Tabs.Screen name="DetalleScreen" options={{ href: null }} />
-<Tabs.Screen name="[id]" options={{ href: null }} />
-<Tabs.Screen 
-  name="cursoDetalle" 
-  options={{ href: null }} 
-/>
-
+      <Tabs.Screen name="DetalleScreen" options={{ href: null }} />
+      <Tabs.Screen name="cursoDetalle" options={{ href: null }} />
+      <Tabs.Screen name="[id]" options={{ href: null }} />
     </Tabs>
   );
 }
